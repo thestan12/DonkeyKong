@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Entity">
+      <UniqueIdentifier>{a9eeb331-dc83-4754-9c07-c511871d250c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity">
+      <UniqueIdentifier>{2221818f-f5b3-459e-a63d-8965c62a9dea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -25,10 +31,19 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Entity</Filter>
     </ClInclude>
     <ClInclude Include="EntityManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="MovableEntity.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="BouleEntity.h">
+      <Filter>Header Files\Entity</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +59,20 @@
     <ClCompile Include="StringHelpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EntityManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="MovableEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="BouleEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

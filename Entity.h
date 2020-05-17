@@ -4,10 +4,13 @@ enum EntityType
 {
 	player,
 	block,
-	echelle
+	echelle,
+	monkey,
+	princesse,
+	boule
 };
 
-class Entity
+class Entity :std::enable_shared_from_this<Entity>
 {
 public:
 	Entity() { };
@@ -18,6 +21,7 @@ public:
 	sf::Vector2u m_size;
 	sf::Vector2f m_position;
 	EntityType m_type;
+
 	bool m_enabled = true;
 
 	// Enemy only
