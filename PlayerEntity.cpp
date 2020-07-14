@@ -21,15 +21,6 @@ bool PlayerEntity::CanMoveUp()
 }
 
 bool PlayerEntity::CanMoveSideway() {
-	std::cout << "\n";
-	std::cout << ("not collide ladder : " );
-	std::cout << (!this->isCollisionWithEchelle());
-	std::cout << "\n";
-	std::cout << ("collide bottom : ");
-	std::cout << (this->isCollisionWithBlockBottom());
-	std::cout << "\n";
-	std::cout << ("reach bottom : ");
-	std::cout << (this->reachLadderBottom());
 	return !this->isCollisionWithEchelle() || (this->isCollisionWithBlockBottom() && (this->reachLadderBottom() || this->reachLadderTop()));
 }
 
