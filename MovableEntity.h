@@ -20,6 +20,9 @@ public:
 
 	bool isCollisionWithBlockBottom();
 
+	bool isOutOfMapLeft();
+	bool isOutOfMapRight();
+
 	bool isCollisionWithEchelleTop();
 	bool reachLadderTop();
 	bool reachLadderBottom();

@@ -235,12 +235,12 @@ void Game::update(sf::Time elapsedTime)
 	if (mIsMovingDown && EntityManager::m_player->CanMoveDown())
 		movement.y += PlayerSpeed;
 	
-	if (mIsMovingLeft && EntityManager::m_player->CanMoveSideway()) {
+	if (mIsMovingLeft && EntityManager::m_player->CanMoveSideway() && !EntityManager::m_player->isOutOfMapLeft()) {
 		EntityManager::m_player->lastDirIsRight = false;
 		movement.x -= PlayerSpeed;
 	}
 		
-	if (mIsMovingRight && EntityManager::m_player->CanMoveSideway()) {
+	if (mIsMovingRight && EntityManager::m_player->CanMoveSideway() && !EntityManager::m_player->isOutOfMapRight()) {
 		EntityManager::m_player->lastDirIsRight = true;
 		movement.x += PlayerSpeed;
 	}

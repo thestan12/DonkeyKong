@@ -39,7 +39,7 @@ bool BouleEntity::EnabledGravity()
 	this->GravitySpeed = 0;
 
 	if (retour) {
-		this->GravitySpeed = 40;
+		this->GravitySpeed = 75;
 	}
 
 	return retour;

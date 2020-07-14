@@ -82,6 +82,24 @@ bool MovableEntity::isCollisionWithEchelleTop()
 	return false;
 }
 
+bool MovableEntity::isOutOfMapLeft() {
+	std::cout << "\n";
+	std::cout << this->m_sprite.getGlobalBounds().left;
+	if (this->m_sprite.getGlobalBounds().left >= 170) {
+		return false;
+	}
+	return true;
+}
+
+bool MovableEntity::isOutOfMapRight() {
+	std::cout << "\n";
+	std::cout << this->m_sprite.getGlobalBounds().left;
+	if (this->m_sprite.getGlobalBounds().left <= 690) {
+		return false;
+	}
+	return true;
+}
+
 bool MovableEntity::EnabledGravity()
 {
 	bool retour = false;

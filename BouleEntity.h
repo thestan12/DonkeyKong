@@ -12,7 +12,7 @@ public:
 public:
 	bool goRight = false;
 	int step = 0;
-	int speedEntity = 40;
+	int speedEntity = 75;
 
 	std::shared_ptr<BouleEntity> m_fille;
 
