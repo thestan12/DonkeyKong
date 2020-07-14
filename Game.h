@@ -4,6 +4,7 @@
 #define BLOCK_COUNT_X 8
 #define BLOCK_COUNT_Y 5
 #define BLOCK_SPACE 110.f
+#include <SFML/Audio.hpp>
 
 class Game
 {
@@ -28,6 +29,7 @@ private:
 
 	void GameWin();
 
+	void StartMusic();
 
 
 private:
@@ -72,5 +74,8 @@ private:
 	sf::Vector2u _sizeBlock;
 	sf::Vector2u _sizeMario;
 	sf::Vector2u _sizeMonkey;
+	
+	sf::SoundBuffer _introBuffer;
+	sf::Sound _introSound;
 };
 

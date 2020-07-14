@@ -21,7 +21,7 @@ Game::Game()
 	, mIsMovingLeft(false)
 {
 	mWindow.setFramerateLimit(160);
-
+	StartMusic();
 
 
 	// Draw blocks
@@ -189,6 +189,7 @@ void Game::run()
 	{
 		sf::Time elapsedTime = clock.restart();
 		timeSinceLastUpdate += elapsedTime;
+		
 		while (timeSinceLastUpdate > TimePerFrame)
 		{
 			timeSinceLastUpdate -= TimePerFrame;
@@ -409,6 +410,13 @@ void Game::GameWin() {
 	EntityManager::m_Entities.push_back(monkey);
 	EntityManager::AddBoule(monkey);
 
+}
+
+void Game::StartMusic() {
+	if (_introBuffer.loadFromFile("Media/Sounds/stagetheme.wav")) {
+		_introSound.setBuffer(_introBuffer);
+		_introSound.play();
+	}
 }
 
 
