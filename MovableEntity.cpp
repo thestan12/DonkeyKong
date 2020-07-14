@@ -54,6 +54,30 @@ bool MovableEntity::isCollisionWithBlockBottom()
 	return false;
 }
 
+bool MovableEntity::reachLadderTop() {
+	if (isCollisionWithEchelle()) {
+		if (this->m_sprite.getGlobalBounds().top - this->m_sprite.getGlobalBounds().height <= this->ColEchelle->m_sprite.getGlobalBounds().top - this->ColEchelle->m_sprite.getGlobalBounds().height - 25) {
+			return true;
+		}
+		return false;
+	}
+}
+
+bool MovableEntity::reachLadderBottom() {
+	if (isCollisionWithEchelle()) {
+		std::cout << "\n";
+		std::cout << "entity top : ";
+		std::cout << this->m_sprite.getGlobalBounds().top + this->m_sprite.getGlobalBounds().height;
+		std::cout << "\n";
+		std::cout << "ladder top : ";
+		std::cout << this->ColEchelle->m_sprite.getGlobalBounds().top + this->ColEchelle->m_sprite.getGlobalBounds().height;
+		if (this->m_sprite.getGlobalBounds().top + this->m_sprite.getGlobalBounds().height >= this->ColEchelle->m_sprite.getGlobalBounds().top + this->ColEchelle->m_sprite.getGlobalBounds().height) {
+			return true;
+		}
+		return false;
+	}
+}
+
 bool MovableEntity::isCollisionWithEchelleTop()
 {
 	if (isCollisionWithEchelle()) {

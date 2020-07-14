@@ -15,6 +15,7 @@ public:
 
 	bool CanMoveDown();
 	bool CanMoveUp();
+	bool CanMoveSideway();
 
 	bool EnabledGravity();
 	std::string Animate();

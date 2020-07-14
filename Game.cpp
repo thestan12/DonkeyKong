@@ -235,12 +235,12 @@ void Game::update(sf::Time elapsedTime)
 	if (mIsMovingDown && EntityManager::m_player->CanMoveDown())
 		movement.y += PlayerSpeed;
 	
-	if (mIsMovingLeft) {
+	if (mIsMovingLeft && EntityManager::m_player->CanMoveSideway()) {
 		EntityManager::m_player->lastDirIsRight = false;
 		movement.x -= PlayerSpeed;
 	}
 		
-	if (mIsMovingRight) {
+	if (mIsMovingRight && EntityManager::m_player->CanMoveSideway()) {
 		EntityManager::m_player->lastDirIsRight = true;
 		movement.x += PlayerSpeed;
 	}

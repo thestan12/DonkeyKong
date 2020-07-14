@@ -21,6 +21,8 @@ public:
 	bool isCollisionWithBlockBottom();
 
 	bool isCollisionWithEchelleTop();
+	bool reachLadderTop();
+	bool reachLadderBottom();
 	bool EnabledGravity() ;
 
 	bool CollisionWithThisEntity(std::shared_ptr<Entity> entity);
