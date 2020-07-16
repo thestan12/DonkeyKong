@@ -83,8 +83,6 @@ bool MovableEntity::isCollisionWithEchelleTop()
 }
 
 bool MovableEntity::isOutOfMapLeft() {
-	std::cout << "\n";
-	std::cout << this->m_sprite.getGlobalBounds().left;
 	if (this->m_sprite.getGlobalBounds().left >= 170) {
 		return false;
 	}
@@ -92,8 +90,6 @@ bool MovableEntity::isOutOfMapLeft() {
 }
 
 bool MovableEntity::isOutOfMapRight() {
-	std::cout << "\n";
-	std::cout << this->m_sprite.getGlobalBounds().left;
 	if (this->m_sprite.getGlobalBounds().left <= 690) {
 		return false;
 	}
